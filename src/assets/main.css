@@ -58,6 +58,7 @@ body {
 
 .product-vote {
   float: right;
+  cursor: pointer;
 }
 
 .prod-title,
