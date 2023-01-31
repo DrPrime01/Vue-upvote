@@ -2,7 +2,7 @@
   <div class="product-container">
     <div
       class="product"
-      v-for="seed in seeds"
+      v-for="seed in productData"
       :key="seed.id"
       :class="{ 'blue-border': seed.votes >= 20 }"
     >
@@ -34,32 +34,12 @@
 </template>
 
 <script>
-import { Products } from "../assets/Data/Seed";
 export default {
   name: "ProductContainer",
-  data() {
-    return {
-      seeds: [],
-    };
-  },
-  mounted() {
-    this.seeds = Products;
-  },
-  computed: {
-    sortedSeeds() {
-      return this.seeds.slice(0).sort((a, b) => {
-        return b.votes - a.votes;
-      });
-    },
-  },
-  watch: {
-    sortedSeeds(newValue) {
-      this.seeds.splice(0, this.seeds.length, ...newValue);
-    },
-  },
+  props: ["productData"],
   methods: {
     handleVote(id) {
-      this.seeds.find((seed) => {
+      this.productData.find((seed) => {
         if (seed.id == id) {
           seed.votes++;
         } else {
