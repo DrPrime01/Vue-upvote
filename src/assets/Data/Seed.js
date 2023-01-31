@@ -15,6 +15,7 @@ export function generateVoteCount() {
 export const Products = [
   {
     id: uuidv4(),
+    number: 1,
     title: "Yellow Pail",
     description: "On-demand sand castle construction expertise.",
     url: "#",
@@ -24,6 +25,7 @@ export const Products = [
   },
   {
     id: uuidv4(),
+    number: 2,
     title: "Supermajority: The Fantasy Congress League",
     description: "Earn points when your favorite politicians pass legislation.",
     url: "#",
@@ -33,6 +35,7 @@ export const Products = [
   },
   {
     id: uuidv4(),
+    number: 3,
     title: "Tinfoild: Tailored tinfoil hats",
     description: "We already have your measurements and shipping address.",
     url: "#",
@@ -42,6 +45,7 @@ export const Products = [
   },
   {
     id: uuidv4(),
+    number: 4,
     title: "Haught or Naught",
     description: "High-minded or absent-minded? You decide.",
     url: "#",
